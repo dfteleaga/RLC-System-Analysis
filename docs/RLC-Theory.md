@@ -97,7 +97,7 @@ Damping Ratio:
 
 $\zeta = \frac{R}{2}\sqrt{\frac{C}{L}}$
 
-Controlls how the system oscillates.
+Controls how the system oscillates.
 
 Cases:
 
@@ -111,6 +111,6 @@ $\zeta > 1$ -> Overdamped
 
 1. Initially, the capacitor charges and stores electric energy.
 2. Capacitor discharges and current increases through the inductor, building magnetic energy.
-3. Current is pushed back by inductor, charging the capacitor in the opposite direction
+3. Collapsing magnetic field induces a voltage that opposes the change in current, charging the capacitor in the opposite direction
 4. Energy keeps swapping repeatedly between L and C
 5. If $R=0$, energy is ideally conserved and oscillation continues forever as the system isn't being damped. If $R>0$, energy is lost over time and the amplitude of the oscillation decays.

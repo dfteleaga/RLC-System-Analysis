@@ -63,3 +63,11 @@ In state-space form:
 $\dot{x_1} = x_2$
 
 $\dot{x_2} = -\frac{R}{L}x_2 - \frac{1}{LC}x_1$
+
+In a **non-homogenous** case where an input voltage is present, we would have to use the complete state-space form. The form we have used until now, $\dot{x} = Ax$, does not take any input conditions into account. In reality, we know that there will be an input voltage which is why we have to use the form:
+
+$\dot{x} = Ax + Bu$
+
+where $u$ is the input. This doesn't change the equation much as the only thing we'd have to do is add the input voltage:
+
+$\dot{x_2} = -\frac{R}{L}x_2 - \frac{1}{LC}x_1 + \frac{1}{L}V_{in}(t)$
