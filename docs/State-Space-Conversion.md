@@ -22,7 +22,7 @@ If we were given both the current **position** and the **velocity** of the ball 
 
 $\ddot{x} + a\dot{x} +bx = 0$
 
-This equation is second-order, making it harder to simulate with a program. Computers work better with first-order differential equations, so we use state-space conversion to convert the above second-order differential into two first-order differential equations.
+This equation is second-order. Most numerical solvers handle first-order differential equations a lot more easily, so we use state-space conversion to convert the above second-order differential into two first-order differential equations.
 
 Let us define some variables:
 
@@ -30,7 +30,7 @@ $x_1 = x$
 
 $x_2 = \dot{x}$
 
-$x$ and $\dot{x}$ are chosen as these are the two minimum variables needed to find out $\ddot{x}$ and therefore figure out the system's condition at any given time.
+$x$ and $\dot{x}$ are chosen as these are sufficient to calculate $\ddot{x}$, and therefore determine the system's condition at any given time.
 
 We can then see that:
 
@@ -62,4 +62,4 @@ In state-space form:
 
 $\dot{x_1} = x_2$
 
-$\dot{x_2} = -\frac{R}{L}x_2 - \frac{1}{LC}bx_1$
+$\dot{x_2} = -\frac{R}{L}x_2 - \frac{1}{LC}x_1$
