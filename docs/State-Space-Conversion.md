@@ -71,3 +71,40 @@ $\dot{x} = Ax + Bu$
 where $u$ is the input. This doesn't change the equation much as the only thing we'd have to do is add the input voltage:
 
 $\dot{x_2} = -\frac{R}{L}x_2 - \frac{1}{LC}x_1 + \frac{1}{L}V_{in}(t)$
+
+## 5. Alternative State Choice
+
+Instead of defining our states as $I$ and $\dot{I}$, another approach would be using the two variables which represent different energy stores $I$ and $V_C$. This approach takes energies into account.
+
+The inductor stores magnetic energy: 
+
+$E_L = \frac{1}{2}LI^2$
+
+The capacitor stores electric energy:
+
+$E_C = \frac{1}{2}CV_C^2$
+
+Since it is known that the order of a system corresponds to the number of independent energy stores, a valid choice for our state variables is:
+
+$x_1 = I$
+
+$x_2 = V_C$
+
+Starting from KVL:
+
+$V_{in}(t) = RI + L\dot{I} + V_C$
+
+Rearrange for $\dot{I}$:
+
+$\dot{I} = \frac{1}{L}V_{in}(t) - \frac{R}{L}I - \frac{1}{L}V_C$
+
+Using $I = C\dot{V_C}$ we get:
+
+$\dot{V_C} = \frac{1}{C}I$
+
+This results into another state-space formulation which is commonly used:
+
+$\dot{x_1} = -\frac{R}{L}x_1 - \frac{1}{L}x_2 + \frac{1}{L}V_{in}(t)
+$
+
+$\dot{x_2} = \frac{1}{C}x_1$
