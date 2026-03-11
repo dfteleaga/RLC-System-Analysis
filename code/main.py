@@ -22,17 +22,17 @@ for R in R_values:
 
     plt.plot(sol.t, sol.y[0], label=f"R = {R}") ## plots the current over time for each value of R
 
-    ax = plt.gca()
+ax = plt.gca()
 
-    plt.xlabel('Time (s)')
-    plt.ylabel('Current (A)')
+plt.xlabel('Time (s)')
+plt.ylabel('Current (A)')
 
-    ## shift the x and y axes to the zero point so it lines up with the graph
-    ax.spines['left'].set_position('zero') 
-    ax.spines['bottom'].set_position('zero')
+## shift the x and y axes to the zero point so it lines up with the graph
+ax.spines['left'].set_position('zero') 
+ax.spines['bottom'].set_position('zero')
 
-    ax.spines['right'].set_color('none')
-    ax.spines['top'].set_color('none')
+ax.spines['right'].set_color('none')
+ax.spines['top'].set_color('none')
 
-    plt.legend()
-    plt.show()
+plt.legend()
+plt.show()
