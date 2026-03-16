@@ -74,7 +74,7 @@ $\dot{x_2} = -\frac{R}{L}x_2 - \frac{1}{LC}x_1 + \frac{1}{L}V_{in}(t)$
 
 ## 5. Alternative State Choice
 
-Instead of defining our states as $I$ and $\dot{I}$, another approach would be using the two variables which represent different energy stores $I$ and $V_C$. This approach takes energies into account.
+Instead of defining our states as $I$ and $\dot{I}$, another approach would be using the two variables which represent different energy stores $I$ and $V_C$. This approach takes energies into account and is an overall more physical state choice which also works better with forced damped cases.
 
 The inductor stores magnetic energy: 
 
