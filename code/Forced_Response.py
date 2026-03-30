@@ -12,7 +12,7 @@ def rlc(t, x, R, L, C, V_in):
     x1 = x[0]
     x2 = x[1]
         
-    dx1 = -(R/L)*x1 - (1/L)*x2 + (V_in/L)  ## gets state space equations for RLC circuit
+    dx1 = -(R/L)*x1 - (1/L)*x2 + (V_in/L)  ## gets systems equations for RLC circuit
     dx2 = (1/C)*x1
         
     return [dx1, dx2]
@@ -44,7 +44,7 @@ def plot_results(results):
     ax.spines['top'].set_color('none')
 
     plt.legend()
-    plt.savefig('forced_response.png')
+    plt.savefig('plots/forced_response.png') 
     plt.show()
 
 if __name__ == "__main__":
